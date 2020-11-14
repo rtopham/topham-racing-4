@@ -195,7 +195,7 @@ router.post('/banners/:userId', auth, (req, res) => {
     else {
       // Upload and save file to file system.
       const ext = path.extname(bannerFile.name).toLowerCase()
-      const targetPath = path.resolve(`client/public/banners/${imgUrl}${ext}`)
+      const targetPath = path.resolve(`uploads//banners/${imgUrl}${ext}`)
 
       bannerFile.mv(targetPath, async (error) => {
         if (error) {
@@ -241,7 +241,7 @@ router.delete('/banners/:bannerId', auth, async (req, res) => {
     const fileName = user.banners[removeIndex].filename
     user.banners.splice(removeIndex, 1)
     await user.save()
-    fs.unlink(path.resolve(`client/public/banners/${fileName}`), (err) => {
+    fs.unlink(path.resolve(`uploads/banners/${fileName}`), (err) => {
       if (err) throw err
     })
 

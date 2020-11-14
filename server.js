@@ -23,6 +23,10 @@ app.use('/api/auth', require('./routes/auth'))
 app.use('/api/strava', require('./routes/strava'))
 app.use('/api/races', require('./routes/races'))
 
+// Serve Static Files
+
+app.use(express.static('uploads'))
+
 const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`))
