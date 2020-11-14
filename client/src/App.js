@@ -40,7 +40,7 @@ const App = () => {
             <AlertState>
               <Router>
                 <MainNavbar />
-                <div className='container'>
+                <div className='globalCore'>
                   <Alerts />
                   <Switch>
                     <Route path='/stats/:userId' component={Banner} />
