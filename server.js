@@ -1,7 +1,7 @@
 const express = require('express')
 const connectDB = require('./config/db')
 
-const bodyParser = require('body-parser')
+const path = require('path')
 const fileupload = require('express-fileupload')
 
 const app = express()
@@ -25,7 +25,7 @@ app.use('/api/races', require('./routes/races'))
 
 // Serve Static Files
 
-app.use(express.static('uploads'))
+app.use(express.static(path.join(__dirname, 'uploads')))
 
 const PORT = process.env.PORT || 5000
 
