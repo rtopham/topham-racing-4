@@ -29,15 +29,15 @@ const StravaState = (props) => {
   let stravaClientSecret
   let stravaUpdateSecret
 
-  if (process.env.NODE_ENV !== 'production') {
-    stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID
-    stravaClientSecret = process.env.REACT_APP_STRAVA_CLIENT_SECRET
-    stravaUpdateSecret = process.env.REACT_APP_STRAVA_UPDATE_SECRET
-  } else {
+  /* if (process.env.NODE_ENV !== 'production') { */
+  stravaClientId = process.env.REACT_APP_STRAVA_CLIENT_ID
+  stravaClientSecret = process.env.REACT_APP_STRAVA_CLIENT_SECRET
+  stravaUpdateSecret = process.env.REACT_APP_STRAVA_UPDATE_SECRET
+  /*   } else {
     stravaClientId = process.env.STRAVA_CLIENT_ID
     stravaClientSecret = process.env.STRAVA_CLIENT_SECRET
     stravaUpdateSecret = process.env.STRAVA_UPDATE_SECRET
-  }
+  } */
 
   //Get Strava Profile
 
